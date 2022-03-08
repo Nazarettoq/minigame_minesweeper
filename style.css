@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root {
+  --game-blocks: 8;
+  --game-blocks-size: 45px;
+  --window-width: calc(var(--game-blocks) * var(--game-blocks-size));
+  --window-margin: calc(var(--window-width) / (-2));
+  --game-color: rgb(221, 221, 221);
+  --game-background: rgb(236, 236, 236);
+}
+body {
+  background-color: var(--game-background);
+}
+#app {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: var(--window-width);
+  margin: var(--window-margin) 0 0 var(--window-margin);
+}
+#gameName {
+  padding-top: 2%;
+  font-size: 200%;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+#header {
+  display: grid;
+  grid-template-columns: 40px 20px 70px;
+  width: var(--window-width);
+  justify-content: space-around;
+  border: 10px ridge var(--game-color);
+  border-bottom: 0px;
+}
+.flagsCount,
+.timer {
+  align-self: center;
+  justify-self: center;
+  font-size: 100%;
+}
+#header button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: var(--game-blocks-size);
+  width: var(--game-blocks-size);
+  font-size: 100%;
+
+  cursor: pointer;
+  border: 5px ridge var(--game-color);
+}
+img {
+  display: block;
+
+  width: 23px;
+  height: 20px;
+}
+#field {
+  display: grid;
+  grid-template-columns: repeat(var(--game-blocks), var(--game-blocks-size));
+  width: var(--window-width);
+  border: 10px ridge var(--game-color);
+}
+
+#field button {
+  height: var(--game-blocks-size);
+  font-size: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgb(78, 78, 78);
+}
+#field button:disabled {
+  border: 1px solid #666;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  background: var(--game-background);
+}
+#levels {
+  padding-top: 5px;
+  width: 90px;
+}
+
+#levels button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 15px;
+}
