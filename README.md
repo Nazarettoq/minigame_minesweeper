@@ -3,4 +3,4 @@ If you doubt whether you need a relationship, I suggest you try yourself in a sm
 
 
 This game implemented using only js. The game has three difficulty levels. Just try it from the link below:
-https://nazarettoq.github.io/minigame_minesweeper/
+https://nazarettoq.github.io/relationship_simulator/
